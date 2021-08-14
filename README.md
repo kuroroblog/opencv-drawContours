@@ -1,4 +1,4 @@
 # opencv-drawContours
-OpenCVのdrawContoursに関するコードです。
+OpenCVのdrawContours関数に関するコードです。
 
 # 参考記事
