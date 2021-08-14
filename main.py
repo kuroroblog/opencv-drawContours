@@ -1,7 +1,7 @@
 import cv2
 
 # 1. 画像を読み込む
-# imread : 指定した画像ファイルパスを読み込んで、OpenCVを利用できるようにする。
+# imread : 指定した画像ファイルパスを読み込んで、画像に対してcv2(OpenCV)を利用できるようにする。
 # 第一引数 : 画像ファイルパス
 # 戻り値 : リスト型にて、画像情報を返す。
 # リスト型とは? : https://atmarkit.itmedia.co.jp/ait/articles/1905/31/news015.html
