@@ -5,7 +5,7 @@ import cv2
 # 第一引数 : 画像ファイルパス
 # 戻り値 : リスト型にて、画像情報を返す。
 # リスト型とは? : https://atmarkit.itmedia.co.jp/ait/articles/1905/31/news015.html
-img = cv2.imread('./test.png')
+img = cv2.imread('./input.png')
 
 # 2. しきい値を用いて二値画像へ変更する
 
@@ -67,4 +67,4 @@ output = cv2.drawContours(img, contours, -1, (255, 255, 0), 5)
 # imwrite : 画像の書き出しを行う関数
 # 第一引数 : 書き出し先の画像ファイル名
 # 第二引数 : 画像情報
-cv2.imwrite('result.png', output)
+cv2.imwrite('./output.png', output)
