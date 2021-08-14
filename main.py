@@ -5,7 +5,7 @@ import cv2
 # 第一引数 : 画像ファイルパス
 # 戻り値 : リスト型にて、画像情報を返す。
 # リスト型とは? : https://atmarkit.itmedia.co.jp/ait/articles/1905/31/news015.html
-img = cv2.imread('/path_to/xxx.xxx')
+img = cv2.imread('./test.png')
 
 # 2. しきい値を用いて二値画像へ変更する
 
