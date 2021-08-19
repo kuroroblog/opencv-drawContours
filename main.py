@@ -33,19 +33,19 @@ ret, thresh = cv2.threshold(imgGray, 127, 255, cv2.THRESH_BINARY)
 
 # 3. findContours関数を用いて輪郭の検出を行う
 # findContours : 輪郭の検出を行う関数
+# findContoursについて : https://kuroro.blog/python/nSvll3vvUPah6Et2rJqG/
 # 第一引数 : 二値画像情報
 # 第二引数 : 輪郭を検出するタイプを指定する。
 # cv2.RETR_EXTERNAL : 一番外側の輪郭のみ抽出する。
-# 輪郭を検出するタイプ一覧情報 : https://pystyle.info/opencv-find-contours/
-# 第三引数 : 輪郭を近似するタイプを指定する。##############
+# 第三引数 : 輪郭を形成する、画素(点)を近似する方法のタイプを指定する。##############
 # cv2.CHAIN_APPROX_SIMPLE : 冗長な画素(点)の情報を削除し、メモリの使用を抑えて輪郭の検出を行う。
 # cv2.CHAIN_APPROX_NONE : 全画素(点)の情報を利用し、輪郭の検出を行う。画素数が多い場合に、メモリの使用量が大きくなり、重くなるので注意が必要。
-####################################################
-# 戻り値  ###########################################
+###############################################
+# 戻り値  #######################
 # image : 輪郭付き画像情報
 # contours : 輪郭を形成する画素(点)情報
-# hierarchy : 輪郭の階層構造
-####################################################
+# hierarchy : オブジェクト(物体)の階層構造情報
+###############################
 # OpenCVのバージョンが4.0より小さい場合
 # image, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
