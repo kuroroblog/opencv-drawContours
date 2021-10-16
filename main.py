@@ -1,10 +1,11 @@
+# 1. 画像を読み込む
+# cv2(OpenCV)を利用する宣言を行う。
 import cv2
 
-# 1. 画像を読み込む
-# imread : 指定した画像ファイルパスを読み込んで、画像に対してcv2(OpenCV)を利用できるようにする。
-# 第一引数 : 画像ファイルパス
-# 戻り値 : リスト型にて、画像情報を返す。
-# リスト型とは? : https://atmarkit.itmedia.co.jp/ait/articles/1905/31/news015.html
+# imread : 画像ファイルを読み込んで、多次元配列(numpy.ndarray)にする。
+# imreadについて : https://kuroro.blog/python/wqh9VIEmRXS4ZAA7C4wd/
+# 第一引数 : 画像のファイルパス
+# 戻り値 : 行 x 列 x 色の三次元配列(numpy.ndarray)が返される。
 img = cv2.imread('./input.png')
 
 # 2. しきい値を用いて二値画像へ変更する
