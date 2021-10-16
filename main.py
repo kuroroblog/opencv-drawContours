@@ -10,13 +10,13 @@ img = cv2.imread('./input.png')
 
 # 2. しきい値を用いて二値画像へ変更する
 
-# cvtColor : 画像の色を変更する関数
-# 第一引数 : 画像情報
-# 第二引数 : 画像の色を変更するタイプの指定
-# cv2.COLOR_BGR2GRAY : 画像をグレースケールへ変更する。
+# cvtColor : 画像の色空間(色)の変更を行う関数。
+# cvtColorについて : https://kuroro.blog/python/7IFCPLA4DzV8nUTchKsb/
+# 第一引数 : 多次元配列(numpy.ndarray)
+# 第二引数 : 変更前の画像の色空間(色)と、変更後の画像の色空間(色)を示す定数を設定。
+# cv2.COLOR_BGR2GRAY : BGR(Blue, Green, Red)形式の色空間(色)を持つ画像をグレースケール画像へ変更する。
 # グレースケールとは? : https://www.shinkohsha.co.jp/blog/monochrome-shirokuro-grayscale/
-# 画像の色を変更するタイプ一覧情報 : https://docs.opencv.org/4.2.0/d8/d01/group__imgproc__color__conversions.html#ga397ae87e1288a81d2363b61574eb8cab
-# 戻り値 : リスト型にて、画像情報を返す。
+# 戻り値 : 多次元配列(numpy.ndarray)
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # threshold : しきい値を用いて画像を二値画像へ変更する関数。
