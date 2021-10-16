@@ -20,16 +20,16 @@ img = cv2.imread('./input.png')
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # threshold : しきい値を用いて画像を二値画像へ変更する関数。
-# 第一引数 : 画像情報(グレースケールでないといけない。二値画像へ変更できないため。)
+# thresholdについて : https://kuroro.blog/python/jofbNumJ9HtfTxnM8QHJ/
+# 第一引数 : 多次元配列(numpy.ndarray)
 # 第二引数 : しきい値
-# 第三引数 : しきい値を超えた画素(点)に対して、与える色の値を指定。白色とする。
+# 第三引数 : しきい値を超えた画素(点)に対して、色の値を指定。255(白色)とする。
 # 第四引数 : 二値画像を判定する条件のタイプを設定する。
 # cv2.THRESH_BINARY : (画素(点)の値 <= 第二引数)の場合、画素(点)に対して、0(黒色)の値を与える。(画素(点)の値 > 第二引数)の場合、画素(点)に対して、第三引数の値(白色)を与える。
-# 二値画像を判定する条件のタイプ一覧情報 : https://pystyle.info/opencv-image-binarization/
 # 戻り値 #################
 # ret :  しきい値を返す。
-# thresh : リスト型にて、二値画像情報を返す。
-#########################
+# thresh : 多次元配列(numpy.ndarray)
+########################
 ret, thresh = cv2.threshold(imgGray, 127, 255, cv2.THRESH_BINARY)
 
 # 3. findContours関数を用いて輪郭の検出を行う
