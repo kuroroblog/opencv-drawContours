@@ -63,8 +63,9 @@ contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPR
 # 戻り値 : 多次元配列(numpy.ndarray)
 output = cv2.drawContours(img, contours, -1, (255, 255, 0), 5)
 
-# 5. 画像を書き出す
-# imwrite : 画像の書き出しを行う関数
-# 第一引数 : 書き出し先の画像ファイル名
-# 第二引数 : 画像情報
+# 5. 画像を保存する
+# imwrite : 画像の保存を行う関数
+# imwriteについて : https://kuroro.blog/python/i0tNE1Mp8aEz8Z7n6Ggg/
+# 第一引数 : 保存先の画像ファイル名
+# 第二引数 : 多次元配列(numpy.ndarray)
 cv2.imwrite('./output.png', output)
