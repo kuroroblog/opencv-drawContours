@@ -58,8 +58,7 @@ contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPR
 # 第一引数 : 多次元配列(numpy.ndarray)
 # 第二引数 : 輪郭を形成する画素(点)情報
 # 第三引数 : 輪郭を形成する画素(点)のインデックス番号を指定する。例えば0を指定すると、1番目の輪郭を形成する画素(点)のみを描画する。1を指定すると、2番目の輪郭を形成する画素(点)のみを描画する。輪郭を形成する画素(点)を全て描画したい場合は、-1を指定する。
-# 第四引数 : 輪郭を形成する画素(点)の色。RGB指定。
-# RGBとは? : https://ja.wikipedia.org/wiki/RGB
+# 第四引数 : 輪郭を形成する画素(点)の色。BGR(Blue, Green, Red)指定。
 # 第五引数(任意) : 輪郭を形成する画素(点)の大きさを設定。デフォルト1。
 # 戻り値 : 多次元配列(numpy.ndarray)
 output = cv2.drawContours(img, contours, -1, (255, 255, 0), 5)
